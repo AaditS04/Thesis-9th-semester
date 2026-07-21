@@ -1,0 +1,27 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.venv/
+venv/
+
+# Private API/model configuration; examples remain tracked.
+calibread_openrouter/config.json
+calibread_openrouter/config.*.private.json
+calibread_analytics/analysis_config.json
+calibread_analytics/analysis_config.*.private.json
+.env
+.env.*
+
+# Generated run/training/analysis artifacts are archived by manifest, not Git.
+calibread_openrouter/outputs/
+calibread_analytics/analysis_assets/
+calibread_research/corpora/
+calibread_research/checkpoints/
+calibread_research/audits/private/
+*.staging-*
+
+# Large deterministic testcase releases are regenerated from the tracked
+# generator and verified against the tracked manifest hashes.
+calibread_research/testcases/r[0-7]_*.jsonl

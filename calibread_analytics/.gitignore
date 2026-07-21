@@ -1,0 +1,4 @@
+analysis_config.json
+paper_assets/
+__pycache__/
+*.pyc

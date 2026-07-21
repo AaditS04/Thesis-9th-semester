@@ -1,0 +1,115 @@
+{
+  "run_id": "YYYYMMDD_model_dimension_split_trainseed_decodeseed_confighash",
+  "status": "planned",
+  "operator": "",
+  "started_at_utc": null,
+  "completed_at_utc": null,
+  "code": {
+    "commit": "",
+    "dirty": false,
+    "source_tree_sha256": "",
+    "environment_lock_sha256": ""
+  },
+  "scientific_bundle": {
+    "schema_version": "calibread-scientific-bundle-v1",
+    "manifest_uri": "scientific_bundle_manifest.json",
+    "sha256": ""
+  },
+  "testcases": {
+    "manifest_sha256": "",
+    "dimension": "R0",
+    "split": "fit",
+    "filter": {},
+    "expected_unique_testcases": 0
+  },
+  "model": {
+    "provider": "",
+    "provider_allow_fallbacks": false,
+    "model_id": "",
+    "model_revision": "",
+    "tokenizer_revision": "",
+    "base_or_instruction": "",
+    "checkpoint_or_adapter_sha256": "",
+    "quantization": null
+  },
+  "training": {
+    "corpus_sha256": "",
+    "unified_training_plan_sha256": "",
+    "checkpoint_stage": "checkpoint_t2",
+    "train_seed": 0,
+    "data_order_seed": 0,
+    "config_sha256": ""
+  },
+  "prompt": {
+    "system_prompt_uri": "calibread_research/prompts/read_system.txt",
+    "system_prompt_sha256": "",
+    "user_prompt_storage": "exact_text_or_immutable_uri",
+    "user_template_sha256": "",
+    "output_schema_version": "read-json-v1"
+  },
+  "decoding": {
+    "greedy_samples": 1,
+    "stochastic_samples": 5,
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "max_completion_tokens": 64,
+    "stop": [],
+    "decoding_seed": 0,
+    "return_token_logprobs": true
+  },
+  "contract": {
+    "primary_loss": "false_commit_per_incoming_query",
+    "target_risk": 0.05,
+    "calibration_confidence": 0.95,
+    "primary_utility": "answer_coverage",
+    "population_mixture": "equal_suite_R1_R6_equal_level_within_suite",
+    "joint_group_scope": "aggregate_plus_h3_13_hard_groups",
+    "r7_status": "secondary_policy_stress"
+  },
+  "inference_determinism": {
+    "engine": "",
+    "engine_version": "",
+    "attention_backend": "",
+    "deterministic_algorithms": true,
+    "kernel_mode": "deterministic_or_documented_exception",
+    "tensor_parallel": 1,
+    "pipeline_parallel": 1,
+    "batch_size": 0,
+    "batch_schedule_sha256": "",
+    "request_order_sha256": "",
+    "repeatability_audit_id": ""
+  },
+  "expected_output_rows": 0,
+  "actual_output_rows": null,
+  "unique_key": [
+    "scientific_bundle_sha256",
+    "observation_id",
+    "sample_kind",
+    "sample_index"
+  ],
+  "hardware": {
+    "accelerator": "",
+    "accelerator_count": 0,
+    "driver": "",
+    "framework": ""
+  },
+  "outputs": {
+    "raw_uri": "raw_generations.csv",
+    "raw_sha256": "",
+    "scored_uri": "scored_results.csv",
+    "scored_sha256": "",
+    "candidate_uri": "candidate_sets.csv",
+    "candidate_sha256": "",
+    "component_links_uri": "component_links.csv",
+    "component_links_sha256": "",
+    "log_uri": "",
+    "log_sha256": ""
+  },
+  "exceptions": [],
+  "approval": {
+    "configuration_frozen_by": "",
+    "configuration_frozen_at_utc": null,
+    "completion_verified_by": "",
+    "completion_verified_at_utc": null
+  }
+}

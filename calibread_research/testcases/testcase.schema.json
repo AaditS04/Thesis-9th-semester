@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://calibread.example/schemas/testcase-v1.json",
+  "title": "CalibRead testcase",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generator_version",
+    "testcase_id",
+    "dimension_id",
+    "dimension_name",
+    "level",
+    "world_id",
+    "split",
+    "generation_seed",
+    "query",
+    "expected_action",
+    "answer_type",
+    "valid_answers",
+    "factors",
+    "knowledge",
+    "grading",
+    "injection_spec",
+    "metadata"
+  ],
+  "properties": {
+    "schema_version": {"const": "calibread-testcase-v1.0"},
+    "generator_version": {"type": "string"},
+    "testcase_id": {"type": "string", "minLength": 1},
+    "dimension_id": {"enum": ["R0", "R1", "R2", "R3", "R4", "R5", "R6", "R7"]},
+    "dimension_name": {"type": "string"},
+    "level": {"type": "string"},
+    "world_id": {"type": "string"},
+    "split": {"enum": ["fit", "tune", "calibrate", "test"]},
+    "generation_seed": {"type": "integer", "minimum": 0},
+    "query": {"type": "string", "minLength": 1},
+    "expected_action": {
+      "enum": ["answer", "abstain", "clarify", "reject_premise", "set"]
+    },
+    "answer_type": {"type": "string"},
+    "valid_answers": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "factors": {
+      "type": "object",
+      "required": [
+        "exposure",
+        "precision",
+        "temporal_status",
+        "ambiguity",
+        "hops",
+        "domain"
+      ],
+      "properties": {
+        "exposure": {"type": "integer", "minimum": 0},
+        "precision": {"type": "string"},
+        "temporal_status": {"type": "string"},
+        "ambiguity": {"type": "integer", "minimum": 1},
+        "hops": {"type": "integer", "minimum": 1},
+        "domain": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "knowledge": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["subject", "relation", "object", "valid_from", "valid_to"],
+        "properties": {
+          "subject": {"type": "string"},
+          "relation": {"type": "string"},
+          "object": {"type": "string"},
+          "valid_from": {"type": "string"},
+          "valid_to": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "grading": {"type": "object"},
+    "injection_spec": {"type": "object"},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": false
+}
+

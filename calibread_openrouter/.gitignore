@@ -1,0 +1,6 @@
+config.json
+config_*.json
+outputs/
+*.key
+__pycache__/
+*.pyc

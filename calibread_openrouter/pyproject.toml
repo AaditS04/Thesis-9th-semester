@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calibread-openrouter"
+version = "0.1.0"
+description = "Resume-safe OpenRouter inference and deterministic grading for CalibRead R0-R7"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+calibread-openrouter = "calibread_openrouter.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

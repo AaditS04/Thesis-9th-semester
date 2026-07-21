@@ -1,0 +1,1 @@
+Estimate whether the candidate response correctly fulfills the question, including its requested time, precision, and action. Return exactly one JSON object: {"p_true":0.0}. The value must be between 0 and 1. Do not explain the score.

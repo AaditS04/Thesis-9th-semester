@@ -1,0 +1,60 @@
+{
+  "api": {
+    "api_key": "PASTE_OPENROUTER_API_KEY_HERE",
+    "base_url": "https://openrouter.ai/api/v1",
+    "http_referer": "https://github.com/your-account/calibread",
+    "app_title": "CalibRead Thesis",
+    "timeout_seconds": 120,
+    "max_retries": 5,
+    "retry_base_seconds": 1.5,
+    "requests_per_minute": 30
+  },
+  "model": {
+    "id": "PASTE_T2_OPENROUTER_MODEL_SLUG_HERE",
+    "analysis_id": "PASTE_SHARED_ANALYSIS_FAMILY_ID_HERE",
+    "revision_note": "Development-only R0 checkpoint gate for T2",
+    "provider": {
+      "only": ["PASTE_PROVIDER_NAME_HERE"],
+      "order": [],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "data_collection": "deny",
+      "zdr": false
+    }
+  },
+  "experiment": {
+    "run_id": "calibread_parametric_r0_t2_gate_001",
+    "testcase_dir": "../calibread_research/testcases",
+    "output_dir": "outputs/calibread_parametric_r0_t2_gate_001",
+    "suites": ["R0"],
+    "splits": ["fit", "tune", "calibrate"],
+    "levels": [],
+    "evaluation_mode": "parametric_checkpoint",
+    "analysis_role": "checkpoint_gate",
+    "checkpoint_stage": "checkpoint_t2",
+    "confirm_parametric_injection": true,
+    "knowledge_checkpoint_manifest": "checkpoint_manifest_t2.json",
+    "include_r5_component_probes": false,
+    "include_r4_second_turns": false,
+    "auxiliary_stochastic_samples": 0,
+    "limit_per_suite": null,
+    "shuffle_seed": 20260722,
+    "test_release_attestation": ""
+  },
+  "generation": {
+    "greedy_temperature": 0.0,
+    "stochastic_samples": 5,
+    "stochastic_temperature": 0.7,
+    "top_p": 0.95,
+    "max_completion_tokens": 64,
+    "seed": 20260722,
+    "request_logprobs": true,
+    "top_logprobs": 0,
+    "structured_outputs": true,
+    "repeatability_repeats": 2,
+    "repeatability_limit_per_suite": 50
+  },
+  "confidence": {"run_p_true": false, "p_true_model": "", "primary_score": "exact_agreement"},
+  "provenance": {"require_clean_git": true},
+  "debug": {"contextual_max_documents": 128}
+}

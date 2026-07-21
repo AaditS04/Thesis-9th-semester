@@ -1,0 +1,65 @@
+{
+  "api": {
+    "api_key": "PASTE_OPENROUTER_API_KEY_HERE",
+    "base_url": "https://openrouter.ai/api/v1",
+    "http_referer": "https://github.com/your-account/calibread",
+    "app_title": "CalibRead Thesis",
+    "timeout_seconds": 120,
+    "max_retries": 5,
+    "retry_base_seconds": 1.5,
+    "requests_per_minute": 30
+  },
+  "model": {
+    "id": "PASTE_OPENROUTER_MODEL_SLUG_HERE",
+    "analysis_id": "",
+    "revision_note": "Record the exact model slug and response model/provider fields",
+    "provider": {
+      "only": [],
+      "order": [],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "data_collection": "deny",
+      "zdr": false
+    }
+  },
+  "experiment": {
+    "run_id": "calibread_run_001",
+    "testcase_dir": "../calibread_research/testcases",
+    "output_dir": "outputs/calibread_run_001",
+    "suites": ["R1", "R2", "R3", "R4", "R5", "R6", "R7"],
+    "splits": ["fit", "tune", "calibrate"],
+    "levels": [],
+    "evaluation_mode": "closed_book_external",
+    "analysis_role": "primary",
+    "checkpoint_stage": "external",
+    "confirm_parametric_injection": false,
+    "knowledge_checkpoint_manifest": "",
+    "include_r5_component_probes": true,
+    "include_r4_second_turns": true,
+    "auxiliary_stochastic_samples": 0,
+    "limit_per_suite": null,
+    "shuffle_seed": 20260722,
+    "test_release_attestation": ""
+  },
+  "generation": {
+    "greedy_temperature": 0.0,
+    "stochastic_samples": 5,
+    "stochastic_temperature": 0.7,
+    "top_p": 0.95,
+    "max_completion_tokens": 64,
+    "seed": 20260722,
+    "request_logprobs": true,
+    "top_logprobs": 0,
+    "structured_outputs": true,
+    "repeatability_repeats": 2,
+    "repeatability_limit_per_suite": 50
+  },
+  "confidence": {
+    "run_p_true": false,
+    "p_true_model": "",
+    "primary_score": "exact_agreement"
+  },
+  "debug": {
+    "contextual_max_documents": 128
+  }
+}

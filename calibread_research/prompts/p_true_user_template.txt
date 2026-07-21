@@ -1,0 +1,5 @@
+Question:
+{{query}}
+
+Candidate response:
+{{candidate_response}}

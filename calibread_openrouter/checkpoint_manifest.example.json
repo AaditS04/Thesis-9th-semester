@@ -1,0 +1,12 @@
+{
+  "served_model_id": "author/private-calibread-model",
+  "base_model_revision": "exact immutable revision",
+  "checkpoint_stage": "checkpoint_t2",
+  "checkpoint_sha256": "64-hex-digest",
+  "corpus_sha256": "64-hex-digest",
+  "unified_calibread_corpus": true,
+  "training_complete": true,
+  "training_seed": 0,
+  "data_order_seed": 0,
+  "notes": "This file is an attestation artifact, not a substitute for training logs."
+}

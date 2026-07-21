@@ -1,0 +1,44 @@
+{
+  "inputs": [
+    "../calibread_openrouter/outputs/calibread_parametric_t2_001",
+    "../calibread_openrouter/outputs/calibread_parametric_t0_temporal_001",
+    "../calibread_openrouter/outputs/calibread_parametric_r0_t2_gate_001",
+    "../calibread_openrouter/outputs/calibread_parametric_r0_t0_gate_001"
+  ],
+  "output_dir": "paper_assets/calibread_parametric_001",
+  "primary_model_id": "PASTE_SHARED_ANALYSIS_FAMILY_ID_HERE",
+  "analysis": {
+    "confidence_column": "confidence_score",
+    "target_false_commit_risk": 0.05,
+    "calibration_confidence": 0.95,
+    "cpr_alpha": 0.05,
+    "candidate_draw_budget": 6,
+    "threshold_start": 0.0,
+    "threshold_stop": 1.0,
+    "threshold_step": 0.01,
+    "bootstrap_replicates": 2000,
+    "permutation_replicates": 5000,
+    "random_seed": 20260722,
+    "ece_bins": 10,
+    "minimum_group_n": 100,
+    "r0_gate": {
+      "known_direct_min": 0.70,
+      "direct_to_paraphrase_max_loss": 0.20,
+      "manual_grading_agreement": {
+        "PASTE_SHARED_ANALYSIS_FAMILY_ID_HERE|checkpoint_t0": null,
+        "PASTE_SHARED_ANALYSIS_FAMILY_ID_HERE|checkpoint_t2": null
+      },
+      "no_split_crossing": false
+    }
+  },
+  "confirmatory": {
+    "require_parametric_status": true,
+    "allowed_statuses": ["confirmatory_parametric"],
+    "allow_incomplete_exploratory": false
+  },
+  "paper": {
+    "title": "CalibRead: Parametric Complexity Analysis of Probabilistic Read Reliability",
+    "author_label": "Anonymous ICLR submission",
+    "analysis_version": "calibread-analysis-v1.0"
+  }
+}

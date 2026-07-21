@@ -1,0 +1,475 @@
+{
+  "files": [
+    {
+      "bytes": 13453764,
+      "file": "r0_baseline_controls.jsonl",
+      "level_splits": {
+        "false_premise": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "known_direct": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "known_paraphrase": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "unknown_entity": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        }
+      },
+      "levels": {
+        "false_premise": 2000,
+        "known_direct": 2000,
+        "known_paraphrase": 2000,
+        "unknown_entity": 2000
+      },
+      "records": 8000,
+      "sha256": "e2d0a502238b63ff02988eb7a6224b8665b254e8d67603585bdec84df69e2d27",
+      "splits": {
+        "calibrate": 1600,
+        "fit": 3200,
+        "test": 2000,
+        "tune": 1200
+      },
+      "unique_worlds": 2000
+    },
+    {
+      "bytes": 9058893,
+      "file": "r1_exposure_frequency.jsonl",
+      "level_splits": {
+        "exposure_0": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        },
+        "exposure_1": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        },
+        "exposure_16": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        },
+        "exposure_2": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        },
+        "exposure_32": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        },
+        "exposure_4": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        },
+        "exposure_8": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        }
+      },
+      "levels": {
+        "exposure_0": 1000,
+        "exposure_1": 1000,
+        "exposure_16": 1000,
+        "exposure_2": 1000,
+        "exposure_32": 1000,
+        "exposure_4": 1000,
+        "exposure_8": 1000
+      },
+      "records": 7000,
+      "sha256": "3b23fd10dead04016eb4373132ebf121917ee8274bf0c9301a42db6e8047cb39",
+      "splits": {
+        "calibrate": 1400,
+        "fit": 2800,
+        "test": 1750,
+        "tune": 1050
+      },
+      "unique_worlds": 7000
+    },
+    {
+      "bytes": 31120019,
+      "file": "r2_precision.jsonl",
+      "level_splits": {
+        "categorical": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "decimal_1": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "decimal_3": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "decimal_5": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "exact_date": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "integer": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "month_year": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "year": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        }
+      },
+      "levels": {
+        "categorical": 2000,
+        "decimal_1": 2000,
+        "decimal_3": 2000,
+        "decimal_5": 2000,
+        "exact_date": 2000,
+        "integer": 2000,
+        "month_year": 2000,
+        "year": 2000
+      },
+      "records": 16000,
+      "sha256": "c9e12ab0fe683360d9625f069bdacd48756da194d5a580813e38c885364a83a7",
+      "splits": {
+        "calibrate": 3200,
+        "fit": 6400,
+        "test": 4000,
+        "tune": 2400
+      },
+      "unique_worlds": 2000
+    },
+    {
+      "bytes": 11936489,
+      "file": "r3_temporal.jsonl",
+      "level_splits": {
+        "current_after_update": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "post_cutoff_unknown": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "stable_pre_cutoff": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "superseded_stale": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        }
+      },
+      "levels": {
+        "current_after_update": 2000,
+        "post_cutoff_unknown": 2000,
+        "stable_pre_cutoff": 2000,
+        "superseded_stale": 2000
+      },
+      "records": 8000,
+      "sha256": "12b15f2c8dfd765b48597d3ec93b38a7e4dfbc0322de7380ecb344f352e354c8",
+      "splits": {
+        "calibrate": 1600,
+        "fit": 3200,
+        "test": 2000,
+        "tune": 1200
+      },
+      "unique_worlds": 8000
+    },
+    {
+      "bytes": 26138652,
+      "file": "r4_ambiguity.jsonl",
+      "level_splits": {
+        "interpretations_1": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "interpretations_2": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "interpretations_3": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "interpretations_4": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        }
+      },
+      "levels": {
+        "interpretations_1": 2000,
+        "interpretations_2": 2000,
+        "interpretations_3": 2000,
+        "interpretations_4": 2000
+      },
+      "records": 8000,
+      "sha256": "9fb4c434d252b3df529138dfcb4d6a846efa2c1ce5792d2fa516e928d0f4f4d7",
+      "splits": {
+        "calibrate": 1600,
+        "fit": 3200,
+        "test": 2000,
+        "tune": 1200
+      },
+      "unique_worlds": 2000
+    },
+    {
+      "bytes": 57418854,
+      "file": "r5_synthesis_depth.jsonl",
+      "level_splits": {
+        "hops_1": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "hops_2": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "hops_3": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "hops_4": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "hops_5": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        }
+      },
+      "levels": {
+        "hops_1": 2000,
+        "hops_2": 2000,
+        "hops_3": 2000,
+        "hops_4": 2000,
+        "hops_5": 2000
+      },
+      "records": 10000,
+      "sha256": "12491b6e952b6c9cad20ac06f336db2802a3148cda8d4688c1b3112de1390ab9",
+      "splits": {
+        "calibrate": 2000,
+        "fit": 4000,
+        "test": 2500,
+        "tune": 1500
+      },
+      "unique_worlds": 2000
+    },
+    {
+      "bytes": 10769029,
+      "file": "r6_domain_shift.jsonl",
+      "level_splits": {
+        "biomedical": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "general": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "legal": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        },
+        "technical": {
+          "calibrate": 400,
+          "fit": 800,
+          "test": 500,
+          "tune": 300
+        }
+      },
+      "levels": {
+        "biomedical": 2000,
+        "general": 2000,
+        "legal": 2000,
+        "technical": 2000
+      },
+      "records": 8000,
+      "sha256": "14e02ebba7d3487d66e96fc674d311e4844d7d3cc52adaef06acf3a964a49cc6",
+      "splits": {
+        "calibrate": 1600,
+        "fit": 3200,
+        "test": 2000,
+        "tune": 1200
+      },
+      "unique_worlds": 8000
+    },
+    {
+      "bytes": 7951878,
+      "file": "r7_threshold_policy.jsonl",
+      "level_splits": {
+        "easy_known": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        },
+        "high_precision": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        },
+        "low_frequency": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        },
+        "multihop": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        },
+        "stale_unknown": {
+          "calibrate": 200,
+          "fit": 400,
+          "test": 250,
+          "tune": 150
+        }
+      },
+      "levels": {
+        "easy_known": 1000,
+        "high_precision": 1000,
+        "low_frequency": 1000,
+        "multihop": 1000,
+        "stale_unknown": 1000
+      },
+      "records": 5000,
+      "sha256": "ac1a32d1b4fac210ea4548d27306914b89a848fee70e074873647f9f896c43d3",
+      "splits": {
+        "calibrate": 1000,
+        "fit": 2000,
+        "test": 1250,
+        "tune": 750
+      },
+      "unique_worlds": 5000
+    }
+  ],
+  "generator_seed": 20260722,
+  "generator_version": "1.1.0",
+  "primary_contract_defaults": {
+    "calibration_confidence": 0.95,
+    "joint_group_scope": "aggregate_plus_h3_13_hard_groups",
+    "loss": "false_commit_per_incoming_query",
+    "primary_utility": "answer_coverage",
+    "target_risk": 0.05
+  },
+  "primary_policy_mixture": {
+    "excluded_from_confirmatory_mixture": [
+      "R0",
+      "R7"
+    ],
+    "included_suites": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6"
+    ],
+    "suite_weighting": "equal_total_weight",
+    "within_suite_level_weighting": "equal"
+  },
+  "r7_threshold_grid": {
+    "application": "posthoc to one cached score per unique query",
+    "start": 0.0,
+    "step": 0.01,
+    "stop": 1.0
+  },
+  "schema_version": "calibread-testcase-v1.0",
+  "scientific_roles": {
+    "R0": "pipeline_and_negative_controls",
+    "R1-R6": "six_controlled_complexity_factors",
+    "R7": "secondary_policy_stress_suite"
+  },
+  "split_policy": {
+    "assignment": "world_index modulo 20",
+    "ratios": {
+      "calibrate": 0.2,
+      "fit": 0.4,
+      "test": 0.25,
+      "tune": 0.15
+    },
+    "world_grouped": true
+  },
+  "total_records": 70000
+}
