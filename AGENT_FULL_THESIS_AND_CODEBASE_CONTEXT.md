@@ -1222,14 +1222,14 @@ The authoritative detailed repair document is
 repair, and acceptance tests for every issue. The summary below exists so a new
 agent cannot miss the state of the repository.
 
-### 10.1 Critical blockers
+### 10.1 Critical blockers found by the original audit
 
 | ID | Issue | Consequence |
 |---|---|---|
 | C01 | row-level weighted Hoeffding ignores dependent rows in repeated worlds | advertised aggregate finite-sample risk guarantee is not justified |
 | C02 | analytics accepts incomplete/duplicated/mixed-stage/malformed sources | invalid data can become confirmatory outputs |
 | C03 | resume identity hashes paths/config but not every scientific file’s contents | prompt/testcase/checkpoint changes can silently reuse old responses |
-| C04 | all project content is currently untracked in Git | no immutable source revision or reproducible run manifest |
+| C04 | all project content was untracked in Git | no immutable source revision or reproducible run manifest |
 
 Recommended C01 method: retain row mixture weights, aggregate them within
 independent `(run_id,world_id)` clusters, and apply weighted Hoeffding using
@@ -1407,7 +1407,8 @@ necessary but not sufficient.
   failure.
 - All JSON files parsed successfully.
 - Markdown local-link audit reported no broken local links.
-- `git diff --check` found no whitespace errors, but most content is untracked.
+- At the original audit, `git diff --check` found no whitespace errors, but
+  most content was untracked. See Section 23 for the repaired current state.
 
 ### 13.3 Testcase validation
 
@@ -1857,16 +1858,19 @@ Protocol v1.2 resolves R02–R05 by demotion:
 
 ### 23.4 Remaining external blockers
 
-1. C04: the files remain untracked and there is no baseline commit/tag. The
-   root ignore policy and frozen-run clean-Git enforcement exist, but the
-   repository owner must review, commit, and tag.
-2. R06: the 200-row human testcase sheet is still blank. The new audit validator
+1. R06: the 200-row human testcase sheet is still blank. The new audit validator
    correctly fails it.
-3. R07: the deterministic 100-R0/200-R1–R7 blinded output sampler and automated
+2. R07: the deterministic 100-R0/200-R1–R7 blinded output sampler and automated
    key exist, but real development outputs and human review are required.
-4. Real unified corpus training, T0/T2 checkpoints, R0 gate passage, development
+3. Real unified corpus training, T0/T2 checkpoints, R0 gate passage, development
    inference, a small real pilot, preregistration signing, and archive steps
    remain to be executed.
+
+C04 is complete for the project baseline: commit `180fdca` contains the full
+framework, the annotated tag is `calibread-research-framework-v1.0`, and a
+fresh checkout regenerated and validated all 70,000 testcase rows with an
+empty Git status. New milestone tags are still required when the pilot,
+calibration freeze, and locked-test release actually occur.
 
 Do not mark these external gates complete, open the locked test, or call the
 study confirmatory-ready until documentary evidence exists.

@@ -15,9 +15,13 @@ the installed-package export, OS/accelerator/driver details, and the environment
 file hash in the run manifest. The code also writes the Python version and
 source hashes into the scientific/analysis manifests.
 
-This file is not a substitute for the frozen Git tag. C04 remains incomplete
-until the repository owner reviews the untracked files, creates the baseline
-commit/tag, and verifies a clean checkout.
+This file is not a substitute for a milestone-specific frozen Git tag. The
+complete project baseline was committed on 2026-07-22 as `180fdca`
+(`Build complete CalibRead research and evaluation framework`) and is released
+under the annotated tag `calibread-research-framework-v1.0`. A fresh checkout
+regenerated and validated all 70,000 testcases against the tracked manifest
+while `git status --porcelain` remained empty. Pilot, calibration-freeze, and
+locked-test tags must still be created at those real events.
 
 The eight generated testcase JSONL files are intentionally release artifacts,
 not Git objects. The generator, validator, schema, and manifest are tracked.

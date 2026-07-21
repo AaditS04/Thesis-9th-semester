@@ -34,16 +34,21 @@ code-solvable C/H/M/R items now have implementations and regression evidence.
 R02–R05 were resolved before freeze by the explicit protocol-v1.2 demotions in
 calibread_research/plans/09_frozen_secondary_scope_decisions.md.
 
-The repository is still **not ready for confirmatory execution** for three
+The repository is still **not ready for confirmatory execution** for two
 truthfully external reasons:
 
-1. **C04:** the repository has no baseline commit/tag and the current scientific
-   files are untracked. Frozen-run code now rejects this state, but the
-   repository owner must review, commit, and tag it.
-2. **R06:** the existing 200-row testcase audit remains blank and must be
+1. **R06:** the existing 200-row testcase audit remains blank and must be
    completed by human reviewers.
-3. **R07:** the reproducible 300-output audit tooling is complete, but the audit
+2. **R07:** the reproducible 300-output audit tooling is complete, but the audit
    cannot be sampled or human-graded until real development outputs exist.
+
+**C04 is now closed for the project baseline.** The complete project was
+committed as `180fdca` (`Build complete CalibRead research and evaluation
+framework`), an annotated project-baseline tag is established after this
+status update, and a fresh checkout regenerated and validated all 70,000
+testcases with the manifest hashes while remaining Git-clean. Pilot,
+calibration-freeze, and locked-test tags must be created only when those real
+milestones occur; they are experimental release gates, not missing repair work.
 
 Real T0/T2 checkpoints, R0 gate results, development inference, and a small real
 pilot also remain experimental execution tasks; no results were fabricated
@@ -66,6 +71,7 @@ Repair-execution statuses used below:
 | **RESOLVED — DEMOTED** | Formally removed from required protocol-v1.2 claims/deliverables before test access. |
 | **PARTIAL — HUMAN EXECUTION PENDING** | Reproducible tooling/gates exist, but a human review using real data is still required. |
 | **BLOCKED — REPOSITORY OWNER ACTION** | Code enforcement exists, but commit/tag authority and repository review are external to this repair pass. |
+| **COMPLETED — BASELINE IMMUTABILITY** | Audited source is committed/tagged and the clean-checkout regeneration acceptance test passed. |
 
 ## 2.1 Repair execution ledger
 
@@ -74,7 +80,7 @@ Repair-execution statuses used below:
 | C01 | **COMPLETED** | Independent-(run, world) cluster weights, effective sample size, exact-binomial eligibility assertion, permutation/duplication tests, and perfect-correlation Monte Carlo coverage. | None in code. |
 | C02 | **COMPLETED** | Mandatory strict preflight, artifact/type/key/count/role/stage/model/provider/bundle/candidate/R5-link checks, input audit, and explicit incomplete-analysis stamp. | Real inputs must pass it. |
 | C03 | **COMPLETED** | Content-addressed scientific bundle in every required row; all-row resume/grade refusal; prompt, testcase, checkpoint, and secret-invariance tests. | None in code. |
-| C04 | **BLOCKED — REPOSITORY OWNER ACTION** | Root .gitignore, environment record, Git state in bundles, and clean/tracked frozen-run enforcement are implemented. | Review files, create baseline commit and annotated/signed freeze tags, then verify a clean checkout. |
+| C04 | **COMPLETED — BASELINE IMMUTABILITY** | Complete source baseline commit `180fdca`; root ignore/environment policy; Git state in bundles; clean/tracked frozen-run enforcement; fresh-checkout regeneration of all 70,000 cases with exact manifest hashes. | Create new annotated/signed tags at the actual pilot, calibration-freeze, and locked-test events. |
 | H01 | **COMPLETED** | Explicit Boolean repeat flags and frozen full-plan request estimate test: 408,700. | None. |
 | H02 | **COMPLETED** | Zero-preserving finite/range-checked primary p-value collection and Holm regression tests. | None. |
 | H03 | **COMPLETED** | Joint world resampling within dimension/level-signature strata; covariance and row-order tests. | None. |
@@ -110,7 +116,8 @@ Repair-execution statuses used below:
 - [x] C01 cluster-valid risk bounds are implemented and simulation-tested.
 - [x] C02 confirmatory input validation is implemented.
 - [x] C03 scientific bundle hashing and resume refusal are implemented.
-- [ ] C04 the code is committed and tagged — **repository owner action**.
+- [x] C04 the complete project baseline is committed, clean-checkout verified,
+  and annotated-tagged.
 - [x] H01 request estimation no longer crashes.
 - [x] H02 zero p-values survive Holm correction.
 - [x] H06 confidence methods cannot be silently mixed.
@@ -346,6 +353,20 @@ but an untracked working tree cannot be reproduced from a commit.
    version, dependency lock, and environment metadata in every run manifest.
 6. Make frozen-run preflight fail when the repository is dirty or required
    files are untracked.
+
+#### Repair execution record — 2026-07-22
+
+- The complete project baseline was committed as `180fdca` with message
+  `Build complete CalibRead research and evaluation framework`.
+- The eight large JSONL files are intentionally ignored generated release
+  artifacts; their generator, schema, validator, human-audit sample, and
+  manifest are tracked.
+- A fresh checkout at the baseline commit regenerated 70,000 records and
+  validated all eight exact SHA-256 values against the tracked manifest.
+- `git status --porcelain` was empty after regeneration.
+- The annotated baseline tag `calibread-research-framework-v1.0` is created on
+  the final status-record commit. Event-specific pilot, calibration, and
+  locked-test tags remain prohibited until those milestones actually occur.
 
 #### Acceptance tests
 
